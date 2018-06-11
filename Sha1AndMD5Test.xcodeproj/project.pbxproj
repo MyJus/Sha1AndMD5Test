@@ -15,6 +15,11 @@
 		B097BEC820CE0A4B0000B2EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B097BEC720CE0A4B0000B2EF /* main.m */; };
 		B097BED220CE0A4B0000B2EF /* Sha1AndMD5TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B097BED120CE0A4B0000B2EF /* Sha1AndMD5TestTests.m */; };
 		B097BEDD20CE0A4B0000B2EF /* Sha1AndMD5TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B097BEDC20CE0A4B0000B2EF /* Sha1AndMD5TestUITests.m */; };
+		B097BEF320CE17380000B2EF /* js_base_64.c in Sources */ = {isa = PBXBuildFile; fileRef = B097BEF220CE17380000B2EF /* js_base_64.c */; };
+		B097BEF620CE1FD40000B2EF /* LJJ_MD5.c in Sources */ = {isa = PBXBuildFile; fileRef = B097BEF520CE1FD40000B2EF /* LJJ_MD5.c */; };
+		B097BEF920CE26850000B2EF /* LJJ_sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = B097BEF820CE26850000B2EF /* LJJ_sha1.c */; };
+		B097BEFC20CE28ED0000B2EF /* MD5AndSha1Header.c in Sources */ = {isa = PBXBuildFile; fileRef = B097BEFB20CE28ED0000B2EF /* MD5AndSha1Header.c */; };
+		B097BEFF20CE52B90000B2EF /* LJJ_MD5AndSha1Handle.m in Sources */ = {isa = PBXBuildFile; fileRef = B097BEFE20CE52B90000B2EF /* LJJ_MD5AndSha1Handle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		B097BED820CE0A4B0000B2EF /* Sha1AndMD5TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sha1AndMD5TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B097BEDC20CE0A4B0000B2EF /* Sha1AndMD5TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sha1AndMD5TestUITests.m; sourceTree = "<group>"; };
 		B097BEDE20CE0A4B0000B2EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B097BEF120CE17380000B2EF /* js_base_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = js_base_64.h; sourceTree = "<group>"; };
+		B097BEF220CE17380000B2EF /* js_base_64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = js_base_64.c; sourceTree = "<group>"; };
+		B097BEF420CE1FD40000B2EF /* LJJ_MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJJ_MD5.h; sourceTree = "<group>"; };
+		B097BEF520CE1FD40000B2EF /* LJJ_MD5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LJJ_MD5.c; sourceTree = "<group>"; };
+		B097BEF720CE26850000B2EF /* LJJ_sha1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJJ_sha1.h; sourceTree = "<group>"; };
+		B097BEF820CE26850000B2EF /* LJJ_sha1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LJJ_sha1.c; sourceTree = "<group>"; };
+		B097BEFA20CE279A0000B2EF /* MD5AndSha1Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MD5AndSha1Header.h; sourceTree = "<group>"; };
+		B097BEFB20CE28ED0000B2EF /* MD5AndSha1Header.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MD5AndSha1Header.c; sourceTree = "<group>"; };
+		B097BEFD20CE52B90000B2EF /* LJJ_MD5AndSha1Handle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJJ_MD5AndSha1Handle.h; sourceTree = "<group>"; };
+		B097BEFE20CE52B90000B2EF /* LJJ_MD5AndSha1Handle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJJ_MD5AndSha1Handle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +116,7 @@
 		B097BEB720CE0A490000B2EF /* Sha1AndMD5Test */ = {
 			isa = PBXGroup;
 			children = (
+				B097BEF020CE17130000B2EF /* Helpers */,
 				B097BEB820CE0A490000B2EF /* AppDelegate.h */,
 				B097BEB920CE0A490000B2EF /* AppDelegate.m */,
 				B097BEBB20CE0A490000B2EF /* ViewController.h */,
@@ -130,6 +146,23 @@
 				B097BEDE20CE0A4B0000B2EF /* Info.plist */,
 			);
 			path = Sha1AndMD5TestUITests;
+			sourceTree = "<group>";
+		};
+		B097BEF020CE17130000B2EF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B097BEFD20CE52B90000B2EF /* LJJ_MD5AndSha1Handle.h */,
+				B097BEFE20CE52B90000B2EF /* LJJ_MD5AndSha1Handle.m */,
+				B097BEFA20CE279A0000B2EF /* MD5AndSha1Header.h */,
+				B097BEFB20CE28ED0000B2EF /* MD5AndSha1Header.c */,
+				B097BEF420CE1FD40000B2EF /* LJJ_MD5.h */,
+				B097BEF520CE1FD40000B2EF /* LJJ_MD5.c */,
+				B097BEF720CE26850000B2EF /* LJJ_sha1.h */,
+				B097BEF820CE26850000B2EF /* LJJ_sha1.c */,
+				B097BEF120CE17380000B2EF /* js_base_64.h */,
+				B097BEF220CE17380000B2EF /* js_base_64.c */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B097BEF320CE17380000B2EF /* js_base_64.c in Sources */,
+				B097BEFC20CE28ED0000B2EF /* MD5AndSha1Header.c in Sources */,
+				B097BEF620CE1FD40000B2EF /* LJJ_MD5.c in Sources */,
 				B097BEBD20CE0A490000B2EF /* ViewController.m in Sources */,
 				B097BEC820CE0A4B0000B2EF /* main.m in Sources */,
 				B097BEBA20CE0A490000B2EF /* AppDelegate.m in Sources */,
+				B097BEF920CE26850000B2EF /* LJJ_sha1.c in Sources */,
+				B097BEFF20CE52B90000B2EF /* LJJ_MD5AndSha1Handle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

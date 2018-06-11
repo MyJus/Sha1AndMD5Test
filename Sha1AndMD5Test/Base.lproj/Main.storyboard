@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,88 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入一个字符串" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m4w-tl-3gR">
+                                <rect key="frame" x="16" y="49" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Pmk-2M-6bF"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21r-Md-vTZ">
+                                <rect key="frame" x="16" y="119" width="162.5" height="30"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YNE-0h-kSp"/>
+                                </constraints>
+                                <state key="normal" title="MD5"/>
+                                <connections>
+                                    <action selector="MD5ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Dg-32-1xO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdr-dc-wH3">
+                                <rect key="frame" x="196.5" y="119" width="162.5" height="30"/>
+                                <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5oH-Vx-mQw"/>
+                                </constraints>
+                                <state key="normal" title="sha1"/>
+                                <connections>
+                                    <action selector="sha1ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qjx-Bt-ham"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="散列计算摘要后的字符串" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZH-eX-gaE">
+                                <rect key="frame" x="16" y="177" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xxv-8X-G42"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入待计算散列的字符串" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nt-FZ-Dmc">
+                                <rect key="frame" x="18" y="206" width="339" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="21r-Md-vTZ" firstAttribute="top" secondItem="m4w-tl-3gR" secondAttribute="bottom" constant="10" id="3Ve-7t-q3s"/>
+                            <constraint firstItem="Jdr-dc-wH3" firstAttribute="top" secondItem="m4w-tl-3gR" secondAttribute="bottom" constant="10" id="HX9-b7-Taq"/>
+                            <constraint firstItem="m4w-tl-3gR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="MXd-5J-ObV"/>
+                            <constraint firstItem="Jdr-dc-wH3" firstAttribute="leading" secondItem="21r-Md-vTZ" secondAttribute="trailing" constant="18" id="PIo-Ij-Zrc"/>
+                            <constraint firstItem="2Nt-FZ-Dmc" firstAttribute="top" secondItem="VZH-eX-gaE" secondAttribute="bottom" constant="8" id="SqY-le-lPn"/>
+                            <constraint firstItem="m4w-tl-3gR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WrH-v1-Y8a"/>
+                            <constraint firstItem="VZH-eX-gaE" firstAttribute="top" secondItem="21r-Md-vTZ" secondAttribute="bottom" constant="28" id="Wxs-gK-ezY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Nt-FZ-Dmc" secondAttribute="trailing" constant="18" id="fIk-LV-DYN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZH-eX-gaE" secondAttribute="trailing" constant="16" id="gvx-XN-AOR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m4w-tl-3gR" secondAttribute="trailing" constant="16" id="klI-Fp-gy1"/>
+                            <constraint firstItem="21r-Md-vTZ" firstAttribute="width" secondItem="Jdr-dc-wH3" secondAttribute="width" id="ksF-zr-OMz"/>
+                            <constraint firstItem="2Nt-FZ-Dmc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="mGs-8G-AKd"/>
+                            <constraint firstItem="VZH-eX-gaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qcK-99-nsI"/>
+                            <constraint firstItem="21r-Md-vTZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tWi-Ko-hWv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jdr-dc-wH3" secondAttribute="trailing" constant="16" id="yqz-hn-MSn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MD5Button" destination="21r-Md-vTZ" id="BUW-V9-LS9"/>
+                        <outlet property="inputTextFiled" destination="m4w-tl-3gR" id="dcN-14-Xri"/>
+                        <outlet property="sha1Button" destination="Jdr-dc-wH3" id="jeh-oL-5ja"/>
+                        <outlet property="showLabel" destination="2Nt-FZ-Dmc" id="zce-KI-e1d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="106.59670164917542"/>
         </scene>
     </scenes>
 </document>
