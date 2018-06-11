@@ -29,7 +29,7 @@ typedef struct md5_ctx
 } md5_ctx;
 /*!
  @brief      内部函数，初始化MD5的context，内容
- @param      ctx
+ @param      ctx 初始化的上下文
  */
 static void ljj_md5_init(md5_ctx *ctx)
 {

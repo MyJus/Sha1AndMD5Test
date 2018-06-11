@@ -15,7 +15,7 @@
 + (NSString *)LJJ_sha1:(NSString *)param {
     
     const char *buf = (const char *)[param cStringUsingEncoding:NSUTF8StringEncoding];
-    char *sha1Char = LJJ_sha1(buf, strlen(buf));
+    char *sha1Char = (char*)LJJ_sha1(buf, strlen(buf));
     NSString *returnString = [NSString stringWithUTF8String:sha1Char];
     free(sha1Char);
     return returnString;
@@ -24,7 +24,7 @@
 
 + (NSString *)LJJ_MD5:(NSString *)param {
     const char *buf = (const char *)[param cStringUsingEncoding:NSUTF8StringEncoding];
-    char *MD5Char = LJJ_MD5(buf, strlen(buf));
+    char *MD5Char = (char*)LJJ_MD5(buf, strlen(buf));
     NSString *returnString = [NSString stringWithUTF8String:MD5Char];
     free(MD5Char);
     return returnString;
